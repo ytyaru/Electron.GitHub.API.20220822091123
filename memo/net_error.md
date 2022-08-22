@@ -211,7 +211,11 @@ Request forbidden by administrative rules. Please make sure your request has a U
 
 # 成功コード
 
+　ソースコード参照。
 
+* [Node.jsの標準モジュール（https）でPostする][]
+
+[Node.jsの標準モジュール（https）でPostする]:https://zenn.dev/matsuei/articles/3b7e2b3627f4fd
 
 　たしかにWebAPIのリクエストには成功した。だが、致命的な問題がある。それはリクエスト後の取得JSON値を返せないことだ。コールバック関数を受け付ければ対処できるが、IPC通信APIはコールバック関数を引数として受け取るとエラーになりやがる。ようするにリクエスト後の処理ができない……。成否判定すらできない。
 
@@ -237,5 +241,22 @@ Uncaught (in promise) Error: An object could not be cloned.
 
 * https://teratail.com/questions/334361
 
-　もしかして標準ライブラリが非推奨ってこと？　Node.jsってヒドイ環境なのね。
+　もしかして標準ライブラリが非推奨ってこと？　嘘だろ……　Node.jsってヒドイ環境なのね。
+
+* [NodeJSのrequestモジュールで同期処理する]
+* [Node.jsでAysnc/Awaitを使ってHTTPリクエストを行う5つの方法][]
+* [requestが非推奨になっていますが、他にオススメのモジュールはありますか？][]
+
+[NodeJSのrequestモジュールで同期処理する]:https://qiita.com/nightyknite/items/46284efb07fff5370914
+[Node.jsでAysnc/Awaitを使ってHTTPリクエストを行う5つの方法]:https://www.twilio.com/blog/5-ways-to-make-http-requests-in-node-js-using-async-await-jp
+[requestが非推奨になっていますが、他にオススメのモジュールはありますか？]:https://teratail.com/questions/334361
+
+* 標準ライブラリ
+    * httpモジュール
+    * httpsモジュール
+* 第三者製ライブラリ
+    * Got
+    * Axios
+    * SuperAgent
+    * node-fetch
 

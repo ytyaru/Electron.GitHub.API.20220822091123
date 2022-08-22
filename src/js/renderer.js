@@ -13,8 +13,8 @@ window.addEventListener('DOMContentLoaded', async(event) => {
             console.log(`リクエスト開始`)
             console.log(setting.github.token)
             console.log(setting.github.repo)
-            await window.myApi.createRepo2(
-            //await window.myApi.createRepo(
+            //await window.myApi.createRepo2( // Uncaught (in promise) Error: An object could not be cloned.
+            await window.myApi.createRepo(
                 setting.github.username, 
                 setting.github.token, 
                 setting.github.repo, 
